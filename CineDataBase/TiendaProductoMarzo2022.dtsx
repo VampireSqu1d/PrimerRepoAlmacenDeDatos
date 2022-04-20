@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/18/2022 9:11:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-BCJ9VN37"
+  DTS:CreatorName="LAPTOP-BCJ9VN37\OMEN"
+  DTS:DTSID="{6CAD4727-8A13-4E6E-8052-DFCC6F0B914F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="22538"
+  DTS:ObjectName="TiendaProductoMarzo2022"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{80F717F1-8F23-44EA-8858-0C42DB79DA68}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[conexion TodasVentas]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{68E442BB-B167-4C60-A477-85BC61438428}"
+      DTS:ObjectName="conexion TodasVentas">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::nomArchi]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SiglasCiudad"
+              DTS:DTSID="{F146B90C-73EF-4DDD-9AB1-DD70F527E9C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDProducto"
+              DTS:DTSID="{1ECC6CF6-0E3C-47E7-8FA3-B8E9D4FFEEE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cantidad"
+              DTS:DTSID="{13467552-FD6A-48BC-A471-63FB49474F66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Precio"
+              DTS:DTSID="{C400DF0B-FBF1-4F80-A840-B07AEC96E247}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ImporteProducto"
+              DTS:DTSID="{19AD7C15-96B3-4F29-A174-64D8742F6441}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C5785C48-50F6-49D3-9414-316A9D73F66C}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\OMEN\Downloads\ventasTodas\ErroresSinCiudadKey.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SiglasCiudad"
+              DTS:DTSID="{5E15E28F-3046-4311-9293-B9DDC1CDA5E9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDProducto"
+              DTS:DTSID="{E68CF50C-9BC3-4053-9D30-EDD6C3A5C184}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cantidad"
+              DTS:DTSID="{84FF7E8F-E757-4611-A62F-DC3F867B5B75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Precio"
+              DTS:DTSID="{2C286994-9081-44B0-9465-BD499258F228}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ImporteProducto"
+              DTS:DTSID="{12E3F8FE-5120-4E1B-8C57-401CD51150DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{70B17A09-7F90-4ED1-9B23-7DFAEC7855EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{B40BF077-F83A-4475-A9D8-054769DA94C7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6C90B564-B546-4FF3-B188-2FB551FE3F52}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="nomArchi">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{38EF2CDE-90CE-471B-8FF1-D0F72448DD5F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varNombreArchivo">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2F755307-E3B4-42F2-8B90-4AB438070A2F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varNombreArchivo1">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Venta Ciudad"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{2C7E7BDF-8B9E-49E5-810D-38A65690B934}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Venta Ciudad">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{4BF47464-B3BB-45AC-903D-E26F5DFD15A1}"
+        DTS:ObjectName="{4BF47464-B3BB-45AC-903D-E26F5DFD15A1}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\OMEN\Downloads\ventasTodas" />
+            <FEFEProperty
+              FileSpec="Ventas*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{44529274-9362-4B05-B461-07F93ADC1D7B}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Extrae Datos Ventas"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="22538"
+                  name="Flat File Destination"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[SiglasCiudad]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="SiglasCiudad"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SiglasCiudad]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[SiglasCiudad]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[IDProducto]"
+                          cachedDataType="i4"
+                          cachedName="IDProducto"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IDProducto]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[IDProducto]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[Cantidad]"
+                          cachedDataType="i4"
+                          cachedName="Cantidad"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Cantidad]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[Precio]"
+                          cachedDataType="cy"
+                          cachedName="Precio"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Precio]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Precio]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[ImporteProducto]"
+                          cachedDataType="cy"
+                          cachedName="ImporteProducto"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ImporteProducto]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[ImporteProducto]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SiglasCiudad]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="SiglasCiudad" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[IDProducto]"
+                          dataType="i4"
+                          name="IDProducto" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Cantidad]"
+                          dataType="i4"
+                          name="Cantidad" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Precio]"
+                          dataType="cy"
+                          name="Precio" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ImporteProducto]"
+                          dataType="cy"
+                          name="ImporteProducto" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="22538"
+                  name="Lee Archivo TodasVentas"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[conexion TodasVentas]"
+                      connectionManagerRefId="Package.ConnectionManagers[conexion TodasVentas]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[SiglasCiudad]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[SiglasCiudad]"
+                          length="50"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[SiglasCiudad]"
+                          name="SiglasCiudad"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[IDProducto]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[IDProducto]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[IDProducto]"
+                          name="IDProducto"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Cantidad]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Cantidad]"
+                          name="Cantidad"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Precio]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[Precio]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Precio]"
+                          name="Precio"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[ImporteProducto]"
+                          dataType="cy"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[ImporteProducto]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[ImporteProducto]"
+                          name="ImporteProducto"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[SiglasCiudad]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="SiglasCiudad" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[IDProducto]"
+                          dataType="i4"
+                          name="IDProducto" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[Cantidad]"
+                          dataType="i4"
+                          name="Cantidad" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[Precio]"
+                          dataType="cy"
+                          name="Precio" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].ExternalColumns[ImporteProducto]"
+                          dataType="cy"
+                          name="ImporteProducto" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup Busca SiglaCiudad DimCiudad"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimCiudad]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimCiudad]) [refTable]
+where [refTable].[SiglasCiudad] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CiudadKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NombreCiudad" dataType="DT_STR" length="20" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="SiglasCiudad" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[SiglasCiudad]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Connections[OleDbConnection]"
+                      connectionManagerID="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LAPTOP-BCJ9VN37.ELTStage]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input].Columns[SiglasCiudad]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="SiglasCiudad"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[SiglasCiudad]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">SiglasCiudad</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="RedirectRow"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Match Output].Columns[CiudadKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Match Output].Columns[CiudadKey]"
+                          name="CiudadKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">CiudadKey</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Agrega Registros en FactTable"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[FactVentas]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Connections[OleDbConnection]"
+                      connectionManagerID="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[LAPTOP-BCJ9VN37.ELTStage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].Columns[Cantidad]"
+                          cachedDataType="i4"
+                          cachedName="Cantidad"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Cantidad]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].Columns[Precio]"
+                          cachedDataType="cy"
+                          cachedName="Precio"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[Precio]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[Precio]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].Columns[CiudadKey]"
+                          cachedDataType="i4"
+                          cachedName="CiudadKey"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[CiudadKey]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Match Output].Columns[CiudadKey]" />
+                        <inputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].Columns[IDProducto]"
+                          cachedDataType="i4"
+                          cachedName="IDProducto"
+                          externalMetadataColumnId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output].Columns[IDProducto]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[IDFactVentas]"
+                          dataType="i4"
+                          name="IDFactVentas" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[ProductoKey]"
+                          dataType="i4"
+                          name="ProductoKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[CiudadKey]"
+                          dataType="i4"
+                          name="CiudadKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
+                          dataType="i4"
+                          name="Cantidad" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input].ExternalColumns[Precio]"
+                          dataType="cy"
+                          name="Precio" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Inputs[Lookup Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Lookup Error Output]"
+                  endId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination.Inputs[Flat File Destination Input]"
+                  name="Lookup Error Output"
+                  startId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Error Output]" />
+                <path
+                  refId="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Lookup Match Output]"
+                  endId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable.Inputs[OLE DB Destination Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad.Outputs[Lookup Match Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F0531C98-C5E2-4184-884A-08AF2971425D}"
+          DTS:ObjectName="{F0531C98-C5E2-4184-884A-08AF2971425D}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::nomArchi" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\LimpiaFactVentas"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BDF970F3-72FB-4802-913C-2B478E624E34}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="LimpiaFactVentas"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE FactVentas" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AE7DAE19-6B0F-46E0-81B1-52513A6F6940}"
+      DTS:From="Package\LimpiaFactVentas"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Venta Ciudad" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas"
+          TopLeft="7.89998023112724,7.00000188032783" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="206.4,104"
+          Size="206.4,147.2"
+          Id="Package\Foreach Venta Ciudad"
+          TopLeft="489.99998052915,186.333334814178" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\LimpiaFactVentas"
+          TopLeft="364.999985496204,56.3333337810305" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="445.799985496204,97.9333337810305">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147.399995032946,88.4000010331472"
+              Start="0,0"
+              End="147.399995032946,80.9000010331472">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.2000005165736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.2000005165736"
+                    Point2="0,44.2000005165736"
+                    Point3="4,44.2000005165736" />
+                  <mssgle:LineSegment
+                    End="143.399995032946,44.2000005165736" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143.399995032946,44.2000005165736"
+                    Point2="147.399995032946,44.2000005165736"
+                    Point3="147.399995032946,48.2000005165736" />
+                  <mssgle:LineSegment
+                    End="147.399995032946,80.9000010331472" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Venta Ciudad\Extrae Datos Ventas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad"
+          TopLeft="208.833325253593,131.166667665376" />
+        <NodeLayout
+          Size="263.2,41.6"
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable"
+          TopLeft="364.999985496204,252.200002004306" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Flat File Destination"
+          TopLeft="679.166639679009,163.800001301765" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lee Archivo TodasVentas"
+          TopLeft="209.99999165535,45.9333336983787" />
+        <EdgeLayout
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Lookup Match Output]"
+          TopLeft="337.633325253593,172.766667665376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.966660242611,79.4333343389299"
+              Start="0,0"
+              End="158.966660242611,71.9333343389299">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.716667169465" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.716667169465"
+                    Point2="0,39.716667169465"
+                    Point3="4,39.716667169465" />
+                  <mssgle:LineSegment
+                    End="154.966660242611,39.716667169465" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.966660242611,39.716667169465"
+                    Point2="158.966660242611,39.716667169465"
+                    Point3="158.966660242611,43.716667169465" />
+                  <mssgle:LineSegment
+                    End="158.966660242611,71.9333343389299" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="31.2919434025554,44.716667169465,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Lookup Error Output]"
+          TopLeft="466.433325253593,151.966667665376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="212.733314425416,32.6333336363898"
+              Start="0,0"
+              End="205.233314425416,32.6333336363898">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="102.366657212708,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="102.366657212708,0"
+                    Point2="106.366657212708,0"
+                    Point3="106.366657212708,4" />
+                  <mssgle:LineSegment
+                    End="106.366657212708,28.6333336363898" />
+                  <mssgle:CubicBezierSegment
+                    Point1="106.366657212708,28.6333336363898"
+                    Point2="106.366657212708,32.6333336363898"
+                    Point3="110.366657212708,32.6333336363898" />
+                  <mssgle:LineSegment
+                    End="205.233314425416,32.6333336363898" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="60.5002704939582,-17.609375,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Venta Ciudad\Extrae Datos Ventas.Paths[Flat File Source Output]"
+          TopLeft="308.79999165535,87.5333336983787">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.8333335982429,43.633333966997"
+              Start="0,0"
+              End="28.8333335982429,36.133333966997">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8166669834985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8166669834985"
+                    Point2="0,21.8166669834985"
+                    Point3="4,21.8166669834985" />
+                  <mssgle:LineSegment
+                    End="24.8333335982429,21.8166669834985" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.8333335982429,21.8166669834985"
+                    Point2="28.8333335982429,21.8166669834985"
+                    Point3="28.8333335982429,25.8166669834985" />
+                  <mssgle:LineSegment
+                    End="28.8333335982429,36.133333966997" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Venta Ciudad\Extrae Datos Ventas\Lookup Busca SiglaCiudad DimCiudad">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCiudad]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Venta Ciudad\Extrae Datos Ventas\OLE DB Agrega Registros en FactTable">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

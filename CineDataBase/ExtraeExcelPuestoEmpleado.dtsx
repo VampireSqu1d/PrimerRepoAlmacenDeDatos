@@ -1,0 +1,568 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/17/2022 11:25:24 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-BCJ9VN37"
+  DTS:CreatorName="LAPTOP-BCJ9VN37\OMEN"
+  DTS:DTSID="{D4D72AF3-0E23-4AA4-9B23-8AB4025DDCE7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="22538"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{2C112CDB-2611-4EE7-9DC9-6199F8A0F9E7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Conexion Excel Puesto]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{57F9FF0F-61D5-4715-BB6D-2AFD9F78597E}"
+      DTS:ObjectName="Conexion Excel Puesto">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\OMEN\Downloads\OneDrive_1_17-4-2022\EmpleadoPuesto2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D1D5A2D2-FE8D-42FE-8899-0C86EAF2692F}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\OMEN\Downloads\OneDrive_1_17-4-2022\EmpleadoPuesto2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extrae Excel Puesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1277E979-9910-465B-BA42-1CC608706B86}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extrae Excel Puesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extrae Excel Puesto\DB StageETL Puesto"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DB StageETL Puesto"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Puesto]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Connections[OleDbConnection]"
+                  connectionManagerID="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-BCJ9VN37.ELTStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[IDEmpleadoPuesto]"
+                      cachedDataType="r8"
+                      cachedName="IDEmpleadoPuesto"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleadoPuesto]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleadoPuesto]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[IDEmpleado]"
+                      cachedDataType="r8"
+                      cachedName="IDEmpleado"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleado]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[IDPuesto]"
+                      cachedDataType="r8"
+                      cachedName="IDPuesto"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDPuesto]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDPuesto]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[Salario]"
+                      cachedDataType="r8"
+                      cachedName="Salario"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[Salario]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Salario]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[Activo]"
+                      cachedDataType="r8"
+                      cachedName="Activo"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Activo]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[FechaInicio]"
+                      cachedDataType="date"
+                      cachedName="FechaInicio"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaInicio]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaInicio]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[FechaFin]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="FechaFin"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaFin]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaFin]" />
+                    <inputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].Columns[FechaHoraRegistro]"
+                      cachedDataType="date"
+                      cachedName="FechaHoraRegistro"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaHoraRegistro]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleadoPuesto]"
+                      dataType="r8"
+                      name="IDEmpleadoPuesto" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      dataType="r8"
+                      name="IDEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[IDPuesto]"
+                      dataType="r8"
+                      name="IDPuesto" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[Salario]"
+                      dataType="r8"
+                      name="Salario" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      dataType="r8"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaInicio]"
+                      dataType="dbTimeStamp"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaFin]"
+                      dataType="wstr"
+                      length="255"
+                      name="FechaFin" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      dataType="dbTimeStamp"
+                      name="FechaHoraRegistro" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extrae Excel Puesto\DB StageETL Puesto.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\DB StageETL Puesto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extrae Excel Puesto\DB StageETL Puesto.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extrae Excel Puesto\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Hoja1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extrae Excel Puesto\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleadoPuesto]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEmpleadoPuesto]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleadoPuesto]"
+                      name="IDEmpleadoPuesto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleado]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDEmpleado]"
+                      name="IDEmpleado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDPuesto]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDPuesto]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[IDPuesto]"
+                      name="IDPuesto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Salario]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[Salario]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Salario]"
+                      name="Salario"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Activo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[Activo]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[Activo]"
+                      name="Activo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaInicio]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaInicio]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaInicio]"
+                      name="FechaInicio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaFin]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaFin]"
+                      length="255"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaFin]"
+                      name="FechaFin"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaHoraRegistro]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].Columns[FechaHoraRegistro]"
+                      name="FechaHoraRegistro"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEmpleadoPuesto]"
+                      dataType="r8"
+                      name="IDEmpleadoPuesto" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDEmpleado]"
+                      dataType="r8"
+                      name="IDEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[IDPuesto]"
+                      dataType="r8"
+                      name="IDPuesto" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[Salario]"
+                      dataType="r8"
+                      name="Salario" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[Activo]"
+                      dataType="r8"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaInicio]"
+                      dataType="date"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaFin]"
+                      dataType="wstr"
+                      length="255"
+                      name="FechaFin" />
+                    <externalMetadataColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output].ExternalColumns[FechaHoraRegistro]"
+                      dataType="date"
+                      name="FechaHoraRegistro" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDEmpleadoPuesto]"
+                      dataType="r8"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDEmpleadoPuesto]"
+                      name="IDEmpleadoPuesto" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDEmpleado]"
+                      dataType="r8"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDEmpleado]"
+                      name="IDEmpleado" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDPuesto]"
+                      dataType="r8"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[IDPuesto]"
+                      name="IDPuesto" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[Salario]"
+                      dataType="r8"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[Salario]"
+                      name="Salario" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[Activo]"
+                      dataType="r8"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[Activo]"
+                      name="Activo" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaInicio]"
+                      dataType="date"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaInicio]"
+                      name="FechaInicio" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaFin]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaFin]"
+                      name="FechaFin" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaHoraRegistro]"
+                      dataType="date"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[FechaHoraRegistro]"
+                      name="FechaHoraRegistro" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extrae Excel Puesto.Paths[Excel Source Output]"
+              endId="Package\Extrae Excel Puesto\DB StageETL Puesto.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Extrae Excel Puesto\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Extrae Excel Puesto"
+          TopLeft="269.166655970945,142.133334462908" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extrae Excel Puesto">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\Extrae Excel Puesto\DB StageETL Puesto"
+          TopLeft="423.333316511579,283.400002252261" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Extrae Excel Puesto\Excel Source"
+          TopLeft="439.999982515972,191.533334855503" />
+        <EdgeLayout
+          Id="Package\Extrae Excel Puesto.Paths[Excel Source Output]"
+          TopLeft="510.866649513776,233.133334855503">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.2666673967577"
+              Start="0,0"
+              End="0,42.7666673967577">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.7666673967577" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extrae Excel Puesto\DB StageETL Puesto">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extrae Excel Puesto\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

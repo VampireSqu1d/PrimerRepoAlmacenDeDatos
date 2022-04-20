@@ -1,0 +1,1446 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/16/2022 7:29:36 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-BCJ9VN37"
+  DTS:CreatorName="LAPTOP-BCJ9VN37\OMEN"
+  DTS:DTSID="{753B3EDF-FCA0-4D89-9CE8-98EEA2E24853}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="22538"
+  DTS:ObjectName="ArchivoEmpleadoNomina"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{1AAE25AC-70ED-4101-99F2-8930B70F3CF0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Archivo Texto Empleado Departamento]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1A736AE2-32B2-4773-813F-C36390631EB4}"
+      DTS:ObjectName="Archivo Texto Empleado Departamento">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\OMEN\Downloads\ArchivoEmpleadoNomina.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDEmpleado"
+              DTS:DTSID="{B6243A35-D30E-4B08-9A7B-CC5D11C48355}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDDepartamento"
+              DTS:DTSID="{EC18F6CF-2051-4D02-85B2-8A39742FF15D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NombreEmpleado"
+              DTS:DTSID="{D632A653-B1B2-4993-81ED-849066D7A323}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activo"
+              DTS:DTSID="{59F44CF2-A0E6-4390-9742-10C664E9CE3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaIngreso"
+              DTS:DTSID="{615B7419-3980-4660-A52C-1AF49C381631}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaHoraRegistro"
+              DTS:DTSID="{7376233B-9B29-4548-BFED-36BBFA886CDC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NombreDepartamento"
+              DTS:DTSID="{2016D055-FEBF-4CF7-B584-0244A85CFCF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaHoraCreacion"
+              DTS:DTSID="{653246CD-B4B1-4328-9DD4-DE0B4208759D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Archivo Texto Empleado Departamento Varchar]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{76E90A40-1CBE-48BB-8D3B-2D10B247093B}"
+      DTS:ObjectName="Archivo Texto Empleado Departamento Varchar">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="22538"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\OMEN\Downloads\ArchivoEmpleadoNomina.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDEmpleado"
+              DTS:DTSID="{1E8A3BA9-62CB-4BC4-9708-0C109C10F8A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IDDepartamento"
+              DTS:DTSID="{F8D50F2F-1FF3-4E7E-ABC9-9C0E132DA251}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NombreEmpleado"
+              DTS:DTSID="{426ECFED-8612-4492-8FE3-58AEF1EF74F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Activo"
+              DTS:DTSID="{6C69921A-5457-45A9-A672-D7A65B55FBC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaIngreso"
+              DTS:DTSID="{A164F0E5-27A3-4904-8EBF-27125FAB5E52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaHoraRegistro"
+              DTS:DTSID="{61F248BB-E812-4BD5-BCBC-0E2FE2427C05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NombreDepartamento"
+              DTS:DTSID="{F551E10A-C2AC-4F28-B697-C88D95A7FD07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaHoraCreacion"
+              DTS:DTSID="{1A4781A3-8B46-4933-BBC0-CC1D52277A6D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Limpia Tabla EmpleadoDepartamento"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{7EACF14B-EB72-4B97-B27F-2B6AF9B1335B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpia Tabla EmpleadoDepartamento"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}"
+          SQLTask:SqlStatementSource="DELETE FROM [ELTStage].[dbo].[EmpleadoDepartamentoVarChar]&#xA;&#xA;DELETE FROM [ELTStage].[dbo].[EmpleadoDepartamento]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Archivo Plano Empleado Departamento"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AE3D7D76-BB30-4237-A5E3-FD0D40ED4249}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Archivo Plano Empleado Departamento"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="22538"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Archivo Texto Empleado Departamento]"
+                  connectionManagerRefId="Package.ConnectionManagers[Archivo Texto Empleado Departamento]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDEmpleado]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDEmpleado]"
+                      name="IDEmpleado"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDDepartamento]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IDDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDDepartamento]"
+                      name="IDDepartamento"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NombreEmpleado]"
+                      length="50"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreEmpleado]"
+                      name="NombreEmpleado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[Activo]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activo]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[Activo]"
+                      name="Activo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaIngreso]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaIngreso]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaIngreso]"
+                      name="FechaIngreso"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]"
+                      name="FechaHoraRegistro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NombreDepartamento]"
+                      length="50"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreDepartamento]"
+                      name="NombreDepartamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaHoraCreacion]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]"
+                      name="FechaHoraCreacion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IDEmpleado]"
+                      dataType="numeric"
+                      name="IDEmpleado"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[IDDepartamento]"
+                      dataType="numeric"
+                      name="IDDepartamento"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaIngreso]"
+                      dataType="date"
+                      name="FechaIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaHoraRegistro]"
+                      dataType="date"
+                      name="FechaHoraRegistro" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[FechaHoraCreacion]"
+                      dataType="date"
+                      name="FechaHoraCreacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[EmpleadoDepartamento]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-BCJ9VN37.ELTStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDEmpleado]"
+                      cachedDataType="numeric"
+                      cachedName="IDEmpleado"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDEmpleado]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDDepartamento]"
+                      cachedDataType="numeric"
+                      cachedName="IDDepartamento"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[IDDepartamento]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NombreEmpleado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NombreEmpleado"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreEmpleado]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Activo]"
+                      cachedDataType="bool"
+                      cachedName="Activo"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[Activo]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaIngreso]"
+                      cachedDataType="date"
+                      cachedName="FechaIngreso"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaIngreso]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaIngreso]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaHoraRegistro]"
+                      cachedDataType="date"
+                      cachedName="FechaHoraRegistro"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NombreDepartamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NombreDepartamento"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[NombreDepartamento]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaHoraCreacion]"
+                      cachedDataType="date"
+                      cachedName="FechaHoraCreacion"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraCreacion]"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      dataType="numeric"
+                      name="IDEmpleado"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDDepartamento]"
+                      dataType="numeric"
+                      name="IDDepartamento"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaIngreso]"
+                      dataType="dbTimeStamp"
+                      name="FechaIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      dataType="dbTimeStamp"
+                      name="FechaHoraRegistro" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraCreacion]"
+                      dataType="dbTimeStamp"
+                      name="FechaHoraCreacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Archivo Plano Empleado Departamento.Paths[Flat File Source Output]"
+              endId="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BD2184E1-7EE8-43BF-B901-982FC8C9F2E2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Archivo Plano Empleado DepartamentoVarChar"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="22538"
+              name="Archivo Fuente"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Archivo Texto Empleado Departamento Varchar]"
+                  connectionManagerRefId="Package.ConnectionManagers[Archivo Texto Empleado Departamento Varchar]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDEmpleado]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDEmpleado]"
+                      name="IDEmpleado"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDDepartamento]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[IDDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDDepartamento]"
+                      name="IDDepartamento"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[NombreEmpleado]"
+                      length="50"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreEmpleado]"
+                      name="NombreEmpleado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[Activo]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[Activo]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[Activo]"
+                      name="Activo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaIngreso]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaIngreso]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaIngreso]"
+                      name="FechaIngreso"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]"
+                      name="FechaHoraRegistro"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[NombreDepartamento]"
+                      length="50"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreDepartamento]"
+                      name="NombreDepartamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaHoraCreacion]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]"
+                      name="FechaHoraCreacion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[IDEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IDEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[IDDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IDDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[Activo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaIngreso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaHoraRegistro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaHoraRegistro" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].ExternalColumns[FechaHoraCreacion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaHoraCreacion" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB StageETL"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[EmpleadoDepartamentoVarChar]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Connections[OleDbConnection]"
+                  connectionManagerID="{F74C4619-F8FC-426C-BDF3-196C85DA9F34}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-BCJ9VN37.ELTStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[IDEmpleado]"
+                      cachedDataType="numeric"
+                      cachedName="IDEmpleado"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDEmpleado]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[IDDepartamento]"
+                      cachedDataType="numeric"
+                      cachedName="IDDepartamento"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[IDDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[IDDepartamento]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[NombreEmpleado]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NombreEmpleado"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[NombreEmpleado]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreEmpleado]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[Activo]"
+                      cachedDataType="bool"
+                      cachedName="Activo"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[Activo]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[FechaIngreso]"
+                      cachedDataType="date"
+                      cachedName="FechaIngreso"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaIngreso]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaIngreso]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[FechaHoraRegistro]"
+                      cachedDataType="date"
+                      cachedName="FechaHoraRegistro"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraRegistro]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[NombreDepartamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NombreDepartamento"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[NombreDepartamento]" />
+                    <inputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].Columns[FechaHoraCreacion]"
+                      cachedDataType="date"
+                      cachedName="FechaHoraCreacion"
+                      externalMetadataColumnId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraCreacion]"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output].Columns[FechaHoraCreacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[IDEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IDEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[IDDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IDDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[NombreEmpleado]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreEmpleado" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[Activo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaIngreso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaIngreso" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraRegistro]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaHoraRegistro" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[NombreDepartamento]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NombreDepartamento" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input].ExternalColumns[FechaHoraCreacion]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FechaHoraCreacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar.Paths[Flat File Source Output]"
+              endId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4C85A826-3517-45C9-A35F-770CA1A769E9}"
+      DTS:From="Package\Limpia Tabla EmpleadoDepartamento"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Tarea Archivo Plano Empleado DepartamentoVarChar" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{00EC2ACE-CF75-445E-B54F-03757F639ADD}"
+      DTS:From="Package\Limpia Tabla EmpleadoDepartamento"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Tarea Archivo Plano Empleado Departamento" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="253.6,41.6"
+          Id="Package\Limpia Tabla EmpleadoDepartamento"
+          TopLeft="414.999983509382,84.0666673347685" />
+        <NodeLayout
+          Size="209.6,74.4"
+          Id="Package\Tarea Archivo Plano Empleado DepartamentoVarChar"
+          TopLeft="191.666659050518,200.200001591047" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="500.866650176049,125.666667334769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-204.399991125531,74.5333342562787"
+              Start="0,0"
+              End="-204.399991125531,67.0333342562787">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.093709881532" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.093709881532"
+                    Point2="0,30.093709881532"
+                    Point3="-4,30.093709881532" />
+                  <mssgle:LineSegment
+                    End="-200.399991125531,30.093709881532" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-200.399991125531,30.093709881532"
+                    Point2="-204.399991125531,30.093709881532"
+                    Point3="-204.399991125531,34.093709881532" />
+                  <mssgle:LineSegment
+                    End="-204.399991125531,67.0333342562787" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="250.4,73.6"
+          Id="Package\Tarea Archivo Plano Empleado Departamento"
+          TopLeft="541.666645142768,201.066668264601" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="582.733316842715,125.666667334769">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.133328300053,75.4000009298324"
+              Start="0,0"
+              End="84.133328300053,67.9000009298324">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.4436367390671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.4436367390671"
+                    Point2="0,30.4436367390671"
+                    Point3="4,30.4436367390671" />
+                  <mssgle:LineSegment
+                    End="80.133328300053,30.4436367390671" />
+                  <mssgle:CubicBezierSegment
+                    Point1="80.133328300053,30.4436367390671"
+                    Point2="84.133328300053,30.4436367390671"
+                    Point3="84.133328300053,34.4436367390671" />
+                  <mssgle:LineSegment
+                    End="84.133328300053,67.9000009298324" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Archivo Plano Empleado DepartamentoVarChar">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,41.6"
+          Id="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\Archivo Fuente"
+          TopLeft="288.333321875996,223.600001777013" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL"
+          TopLeft="285.833321975338,333.666669318411" />
+        <EdgeLayout
+          Id="Package\Tarea Archivo Plano Empleado DepartamentoVarChar.Paths[Flat File Source Output]"
+          TopLeft="365.483321925667,265.200001777013">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.4666675413981"
+              Start="0,0"
+              End="0,60.9666675413981">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.9666675413981" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Archivo Plano Empleado DepartamentoVarChar\OLE DB StageETL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Archivo Plano Empleado Departamento">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination"
+          TopLeft="458,275" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Tarea Archivo Plano Empleado Departamento\Flat File Source"
+          TopLeft="274,143" />
+        <EdgeLayout
+          Id="Package\Tarea Archivo Plano Empleado Departamento.Paths[Flat File Source Output]"
+          TopLeft="349.6,184.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="194,90.4000000000001"
+              Start="0,0"
+              End="194,82.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.2"
+                    Point2="0,45.2"
+                    Point3="4,45.2" />
+                  <mssgle:LineSegment
+                    End="190,45.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="190,45.2"
+                    Point2="194,45.2"
+                    Point3="194,49.2" />
+                  <mssgle:LineSegment
+                    End="194,82.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Archivo Plano Empleado Departamento\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
